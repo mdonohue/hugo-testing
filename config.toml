@@ -10,6 +10,8 @@ defaultContentLanguageInSubdir = true
 weight = 1
 [languages.de]
 weight = 2
+[languages.nl]
+weight = 2
 
 # EN content
 [[module.mounts]]
@@ -28,3 +30,15 @@ lang = 'de'
 source = 'content/en'
 target = 'content'
 lang = 'de'
+
+# NL content
+[[module.mounts]]
+source = 'content/nl'
+target = 'content'
+lang = 'nl'
+
+# This fills in the gaps in NL content with EN content
+[[module.mounts]]
+source = 'content/en'
+target = 'content'
+lang = 'nl'
